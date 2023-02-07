@@ -5,8 +5,11 @@ function addUser() {
 
   user_name = document.getElementById("user_name").value;
 
-  localStorage.setItem("user_name", user_name);
-  
+  if(user_name.length != 0 ){
+    localStorage.setItem("user_name", user_name);
     window.location = "kwitter_room.html";
+  }else{
+    alert("Ingresa un nombre válido")
+  }
 }
 
